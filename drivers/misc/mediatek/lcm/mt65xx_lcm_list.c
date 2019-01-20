@@ -22,6 +22,10 @@
 
 LCM_DRIVER *lcm_driver_list[] = {
 
+#if defined(AMOI_R63419_WQHD_TRULY_PHANTOM_2K_VDO_OK)
+	&r63419_wqhd_truly_phantom_vdo_lcm_drv,
+#endif
+	
 #if defined(BOE_NT36760_DSI_CMD_SGM3804)
 	&boe_nt36760_dsi_cmd_sgm3804_lcm_drv,
 #endif
