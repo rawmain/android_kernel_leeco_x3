@@ -113,5 +113,8 @@ else
 	endif
 endif
 
+obj-y      += DW9714AF.o
+#obj-y      += sub_lens.o
+
 
 

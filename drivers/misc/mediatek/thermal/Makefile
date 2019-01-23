@@ -11,6 +11,8 @@ ifeq ($(CONFIG_MTK_LEDS), y)
 endif
 
 obj-$(CONFIG_THERMAL) += mtk_cooler_kshutdown.o
+obj-$(CONFIG_THERMAL) += mtk_cooler_spkrvol.o
+#obj-$(CONFIG_THERMAL) += mtk_cooler_dropcall.o
 obj-$(CONFIG_THERMAL) += mtk_cooler_cam.o
 obj-$(CONFIG_THERMAL) += mtk_cooler_vrt.o
 

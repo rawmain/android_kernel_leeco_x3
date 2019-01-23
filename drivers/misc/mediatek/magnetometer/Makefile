@@ -41,3 +41,7 @@ obj-$(CONFIG_MTK_YAS532)   +=  yamaha532/
 obj-$(CONFIG_MTK_YAS532_NEW)   +=  yamaha532-new/
 obj-$(CONFIG_MTK_YAS537)	+=  yamaha537/
 obj-$(CONFIG_MTK_MXG2320_NEW)	+= mxg2320-new/
+
+ifeq ($(CONFIG_MTK_AKM09911_NEW_61),y)
+obj-y   +=  akm09911_new_61/
+endif

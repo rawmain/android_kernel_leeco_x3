@@ -41,6 +41,7 @@ ifneq ($(CONFIG_MTK_GIC),y)
 obj-y   += irq/
 endif
 
+obj-$(CONFIG_MTK_CPU_STRESS)	+= cpu_stress/
 obj-$(CONFIG_MTK_LASTPC)	    += lastpc/
 obj-$(CONFIG_MTK_DBG_DUMP) += dbg_dump/
 
@@ -67,6 +68,8 @@ obj-$(CONFIG_MTPROF)	+= mtprof/
 obj-$(CONFIG_MEDIATEK_SOLUTION)	+= sched/
 obj-$(CONFIG_MTK_CMDQ) += cmdq/
 obj-y	+= mmp/
+obj-y	+= dispsys/
+obj-$(CONFIG_MTK_VIDEOX) += videox/
 obj-$(CONFIG_MTK_FB) += video/
 
 obj-$(CONFIG_MTK_AUXADC)	+= auxadc/
@@ -78,6 +81,8 @@ ifneq ($(strip $(CONFIG_CUSTOM_KERNEL_EXTMD)),"")
 obj-y	+= emd_ctl/
 endif
 endif
+
+obj-$(CONFIG_MTK_WFD_SUPPORT)  += uibc/
 
 ifneq ($(wildcard $(srctree)/$(src)/met/),)
  
