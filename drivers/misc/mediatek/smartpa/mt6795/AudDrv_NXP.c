@@ -78,7 +78,7 @@
 #define smart_set_gpio(x) (x|0x80000000)
 //GPIO11 should set gpio input because it's a int pin
 #ifndef GPIO_AUD_EXTDAC_RST_PIN
-#define GPIO_AUD_EXTDAC_RST_PIN GPIO_SMARTPA_RST_PIN //171  
+#define GPIO_AUD_EXTDAC_RST_PIN 171 //171  
 #endif
 
 #ifndef GPIO_NXPSPA_I2S_LRCK_PIN

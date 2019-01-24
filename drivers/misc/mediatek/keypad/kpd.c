@@ -99,11 +99,11 @@ static struct platform_driver kpd_pdrv = {
 
 //temp add for IGZO LCM panel
 static struct delayed_work lcm_susped_work;
-extern void lcm_power_off(void);
+//extern void lcm_power_off(void);
 extern int	checkAndRelease(void);
 static void lcm_irq_work(struct work_struct *work)
 {
-    lcm_power_off();
+   // lcm_power_off();
     checkAndRelease();
 }
 

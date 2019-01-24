@@ -1780,14 +1780,12 @@ void smi_dumpDebugMsg(void)
 		smi_dumpLarbDebugMsg(u4Index);
 }
 
-int smi_debug_bus_hanging_detect_ext(unsigned int larbs, int show_dump, int output_gce_buffer)
-{
+int smi_debug_bus_hanging_detect_ext(unsigned int larbs, int show_dump, int output_gce_buffer){
 	SMIMSG("Not support to write log into CMDQ error dumping messages\n");
 	return 0;
 }
 
-int smi_debug_bus_hanging_detect(unsigned int larbs, int show_dump)
-{
+int smi_debug_bus_hanging_detect(unsigned int larbs, int show_dump){
 
 	int i = 0;
 	int dump_time = 0;

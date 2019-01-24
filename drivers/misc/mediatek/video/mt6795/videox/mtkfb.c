@@ -56,7 +56,7 @@
 #define ALIGN_TO(x, n)  \
 	(((x) + ((n) - 1)) & ~((n) - 1))
 	
-extern void lcm_power_off(void);
+//extern void lcm_power_off(void);
 extern unsigned int isAEEEnabled;
 
 struct notifier_block pm_nb;
@@ -2528,7 +2528,7 @@ static void mtkfb_shutdown(struct device *pdev)
 		msleep(2 * 100000 / lcd_fps);	/* Delay 2 frames. */
 
 	if (primary_display_is_sleepd()) {
-		lcm_power_off();//temp solution for sharp nt35532 LCM display
+		// lcm_power_off();//temp solution for sharp nt35532 LCM display
 		MTKFB_LOG("mtkfb has been power off\n");
 		return;
 	}
@@ -2538,7 +2538,7 @@ static void mtkfb_shutdown(struct device *pdev)
 
 	primary_display_suspend();
 	MTKFB_LOG("[FB Driver] leave mtkfb_shutdown\n");
-	lcm_power_off();//temp solution for sharp nt35532 LCM display
+	// lcm_power_off();//temp solution for sharp nt35532 LCM display
 }
 
 void mtkfb_clear_lcm(void)
