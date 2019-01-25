@@ -11,6 +11,7 @@ obj-$(CONFIG_MTK_AKM8975)	+=  akm8975/
 obj-$(CONFIG_MTK_AKM8975_AUTO)	+=  akm8975_auto/
 obj-$(CONFIG_MTK_AKM09911)   +=  akm09911/
 obj-$(CONFIG_MTK_AKM09911_NEW)   +=  akm09911-new/
+obj-$(CONFIG_MTK_AKM09911_NEW_61)   +=  akm09911_new_61/
 obj-$(CONFIG_MTK_AMI304)   +=  ami304/
 obj-$(CONFIG_MTK_AMI304_AUTO)   +=  ami304_auto/
 obj-$(CONFIG_MTK_BMM050)	+=  bmm050/
@@ -41,7 +42,3 @@ obj-$(CONFIG_MTK_YAS532)   +=  yamaha532/
 obj-$(CONFIG_MTK_YAS532_NEW)   +=  yamaha532-new/
 obj-$(CONFIG_MTK_YAS537)	+=  yamaha537/
 obj-$(CONFIG_MTK_MXG2320_NEW)	+= mxg2320-new/
-
-ifeq ($(CONFIG_MTK_AKM09911_NEW_61),y)
-obj-y   +=  akm09911_new_61/
-endif
