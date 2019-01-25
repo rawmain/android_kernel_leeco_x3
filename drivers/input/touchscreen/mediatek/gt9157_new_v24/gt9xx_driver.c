@@ -275,7 +275,7 @@ static struct proc_dir_entry *gt91xx_gesture_proc = NULL;	//add by huangwb @2014
 
 
 /******************ATTR_FOR_AMOI_ENGINEER_MODE ********************************/
-#if ATTR_FOR_AMOI_ENGINEER_MODE
+#ifndef ATTR_FOR_AMOI_ENGINEER_MODE
 extern struct platform_driver tpd_driver;
 static u8 g_sensor_id[3];
 
@@ -1362,7 +1362,7 @@ static s32 gtp_init_panel(struct i2c_client *client)
         GTP_INFO("Sensor_ID: %d", sensor_id);
     }
 	
-#if ATTR_FOR_AMOI_ENGINEER_MODE
+#ifndef ATTR_FOR_AMOI_ENGINEER_MODE
 		gtp_get_sensor_id(client);	 // added huangwb@20140909
 #endif
 
@@ -2218,7 +2218,7 @@ static s32 tpd_i2c_probe(struct i2c_client *client, const struct i2c_device_id *
     }
 #endif
 
-#if ATTR_FOR_AMOI_ENGINEER_MODE
+#ifndef ATTR_FOR_AMOI_ENGINEER_MODE
 if((ret = gtp_create_attr(&tpd_driver.driver))) 
 {
 	GTP_DEBUG("create attribute err = %d\n", ret);
