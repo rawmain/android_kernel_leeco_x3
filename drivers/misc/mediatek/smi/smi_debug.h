@@ -9,14 +9,14 @@
 
 #define SMI_DGB_LARB_SELECT(smi_dbg_larb, n) ((smi_dbg_larb) & (1<<n))
 
-#ifdef CONFIG_MTK_SMI_EXT
-#define smi_debug_bus_hanging_detect(larbs, show_dump) {}
-#define smi_debug_bus_hanging_detect_ext(larbs, show_dump, output_gce_buffer) {}
-#else
+//#ifdef CONFIG_MTK_SMI_EXT 
+//#define smi_debug_bus_hanging_detect(larbs, show_dump) {} 
+//#define smi_debug_bus_hanging_detect_ext(larbs, show_dump, output_gce_buffer) {} 
+//#else
 int smi_debug_bus_hanging_detect(unsigned int larbs, int show_dump);
     /* output_gce_buffer = 1, pass log to CMDQ error dumping messages */
 int smi_debug_bus_hanging_detect_ext(unsigned int larbs, int show_dump, int output_gce_buffer);
 
-#endif
+//#endif
 
 #endif				/* _SMI_DEBUG_H__ */
