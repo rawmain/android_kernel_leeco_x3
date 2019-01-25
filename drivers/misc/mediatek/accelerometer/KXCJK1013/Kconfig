@@ -1,0 +1,4 @@
+
+config MTK_KXCJK1013
+	bool "KXTIK1013 for MediaTek package"
+	default n
