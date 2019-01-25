@@ -160,3 +160,7 @@ endif
 ifeq ($(CONFIG_MTK_GT911TB_HOTKNOT),y)
 obj-y	+=  GT911TB_HOTKNOT/
 endif
+
+ifeq ($(CONFIG_MTK_GT9157_861),y)
+obj-y	+=  gt9157_new_v24/
+endif
